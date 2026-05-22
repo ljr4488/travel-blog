@@ -22,13 +22,29 @@ const trips = [
     title: 'Museum, cafe, and local notes',
     details: ['National Palace Museum', 'Cafe list review', 'Write cost summary for sharing'],
   },
+  {
+    day: 'Day 4',
+    city: 'Taipei to Seoul',
+    date: '2026.06.15',
+    title: 'Last walk and departure',
+    details: ['Morning souvenir stop', 'Pack travel receipts', 'Evening flight back to Seoul'],
+  },
 ]
 
 const notes = [
   { label: 'Budget', value: '₩620,000' },
-  { label: 'Travelers', value: '3 people' },
-  { label: 'Shared posts', value: '8 drafts' },
+  { label: 'Travelers', value: '2 people' },
 ]
+
+const calendarWeeks = [
+  ['', '1', '2', '3', '4', '5', '6'],
+  ['7', '8', '9', '10', '11', '12', '13'],
+  ['14', '15', '16', '17', '18', '19', '20'],
+  ['21', '22', '23', '24', '25', '26', '27'],
+  ['28', '29', '30', '', '', '', ''],
+]
+
+const tripDates = ['12', '13', '14', '15']
 
 function App() {
   return (
@@ -36,30 +52,25 @@ function App() {
       <section className="hero-section" aria-label="Travel overview">
         <nav className="topbar" aria-label="Primary navigation">
           <strong>Travel Log</strong>
-          <div>
-            <a href="#schedule">Schedule</a>
-            <a href="#share">Share</a>
-          </div>
         </nav>
 
         <div className="hero-grid">
           <div className="hero-copy">
             <p className="eyebrow">Trip planner and shareable blog</p>
-            <h1>Plan the route, keep the notes, share the journey.</h1>
+            <h1>상해 여행 노트</h1>
             <p>
-              여행 날짜별 일정, 예산, 장소 메모를 한 화면에서 정리하고 GitHub Pages로
-              친구들에게 공유할 수 있는 React 여행 블로그입니다.
+              여행 날짜별 일정, 예산, 장소 메모를 한 화면에서 정리하고 공유할 수 있는 여행 블로그.
             </p>
             <div className="hero-actions">
-              <a className="primary-action" href="#schedule">View itinerary</a>
-              <a className="secondary-action" href="#share">Sharing notes</a>
+              <a className="primary-action" href="#schedule">일정 보기</a>
+              <a className="secondary-action" href="#share">공유 노트</a>
             </div>
           </div>
 
           <aside className="trip-panel" aria-label="Trip summary">
             <span className="panel-label">Next Trip</span>
             <h2>Taipei Weekend</h2>
-            <p>June 12 - 14, 2026</p>
+            <p>June 12 - 15, 2026</p>
             <div className="metric-row">
               {notes.map((note) => (
                 <div key={note.label}>
@@ -68,14 +79,36 @@ function App() {
                 </div>
               ))}
             </div>
+
+            <div className="calendar-card" aria-label="June 2026 travel calendar">
+              <div className="calendar-head">
+                <strong>June 2026</strong>
+                <span>4-day route</span>
+              </div>
+              <div className="calendar-weekdays" aria-hidden="true">
+                {['S', 'M', 'T', 'W', 'T', 'F', 'S'].map((day) => (
+                  <span key={day}>{day}</span>
+                ))}
+              </div>
+              <div className="calendar-grid">
+                {calendarWeeks.flat().map((date, index) => (
+                  <span
+                    className={tripDates.includes(date) ? 'selected-date' : ''}
+                    key={`${date || 'empty'}-${index}`}
+                  >
+                    {date}
+                  </span>
+                ))}
+              </div>
+            </div>
           </aside>
         </div>
       </section>
 
       <section className="content-section" id="schedule">
         <div className="section-heading">
-          <p className="eyebrow">Itinerary</p>
-          <h2>Daily travel plan</h2>
+          <p className="eyebrow">여행 일정</p>
+          <h2>일일 여행 계획</h2>
         </div>
 
         <div className="timeline">

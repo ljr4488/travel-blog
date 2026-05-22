@@ -26,15 +26,15 @@ a {
 }
 
 .app-shell {
-  min-height: 100vh;
+  min-height: 100svh;
 }
 
 .hero-section {
-  min-height: 92vh;
+  min-height: 100svh;
   padding: 24px clamp(18px, 4vw, 64px) 56px;
   background:
     linear-gradient(rgba(22, 32, 27, 0.52), rgba(22, 32, 27, 0.28)),
-    url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80')
+    url('./assets/sanghai.jpg')
       center / cover;
   color: #fffdf7;
 }
@@ -70,7 +70,7 @@ a {
   align-items: end;
   gap: 32px;
   max-width: 1180px;
-  min-height: calc(92vh - 88px);
+  min-height: calc(100svh - 88px);
   margin: 0 auto;
 }
 
@@ -100,7 +100,7 @@ p {
 
 h1 {
   margin-bottom: 20px;
-  font-size: clamp(2.8rem, 7vw, 6.8rem);
+  font-size: clamp(2.8rem, 7vw, 6rem);
   line-height: 0.95;
   letter-spacing: 0;
 }
@@ -157,7 +157,7 @@ h1 {
 
 .metric-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   margin-top: 22px;
 }
@@ -172,6 +172,60 @@ h1 {
   display: block;
   color: #66736b;
   font-size: 0.78rem;
+}
+
+.calendar-card {
+  margin-top: 22px;
+  border-top: 1px solid rgba(23, 32, 27, 0.12);
+  padding-top: 18px;
+}
+
+.calendar-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.calendar-head span {
+  color: #66736b;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.calendar-weekdays,
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.calendar-weekdays {
+  margin-bottom: 8px;
+}
+
+.calendar-weekdays span {
+  color: #66736b;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.calendar-grid span {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  color: #334139;
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.calendar-grid .selected-date {
+  background: #d05f3f;
+  color: #fffdf7;
+  box-shadow: 0 8px 18px rgba(208, 95, 63, 0.26);
 }
 
 .content-section,
