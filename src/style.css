@@ -264,11 +264,62 @@ h1 {
   font-size: 1.4rem;
 }
 
-.timeline-card ul {
-  display: grid;
-  gap: 8px;
-  margin: 0;
-  padding-left: 20px;
+.timeline-content {
+  min-width: 0;
+}
+
+.schedule-table-wrap {
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.96rem;
+}
+
+.schedule-table th,
+.schedule-table td {
+  border-bottom: 1px solid rgba(23, 32, 27, 0.12);
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.schedule-table th {
+  background: #eef3e7;
+  color: #334139;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.schedule-table th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.schedule-table th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.schedule-table td:first-child,
+.schedule-table td:nth-child(2) {
+  width: 110px;
+  color: #d05f3f;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.schedule-table td:nth-child(3) {
+  width: 22%;
+  font-weight: 800;
+}
+
+.schedule-table td:nth-child(4) {
+  width: 30%;
+}
+
+.schedule-table tr:last-child td {
+  border-bottom: 0;
 }
 
 .share-section {
@@ -325,5 +376,50 @@ h1 {
 
   .metric-row {
     grid-template-columns: 1fr;
+  }
+
+  .schedule-table,
+  .schedule-table thead,
+  .schedule-table tbody,
+  .schedule-table tr,
+  .schedule-table th,
+  .schedule-table td {
+    display: block;
+  }
+
+  .schedule-table thead {
+    display: none;
+  }
+
+  .schedule-table tr {
+    border-bottom: 1px solid rgba(23, 32, 27, 0.12);
+    padding: 12px 0;
+  }
+
+  .schedule-table tr:last-child {
+    border-bottom: 0;
+  }
+
+  .schedule-table td {
+    display: grid;
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 10px;
+    width: 100%;
+    border-bottom: 0;
+    padding: 5px 0;
+  }
+
+  .schedule-table td:first-child,
+  .schedule-table td:nth-child(2),
+  .schedule-table td:nth-child(3),
+  .schedule-table td:nth-child(4) {
+    width: 100%;
+  }
+
+  .schedule-table td::before {
+    content: attr(data-label);
+    color: #66736b;
+    font-size: 0.78rem;
+    font-weight: 900;
   }
 }
