@@ -935,10 +935,10 @@ function CostTableView({ rows, updateRow, addRow, saveRow, deleteRow }) {
             <tr>
               <th scope="col">순번</th>
               <th scope="col">항목명</th>
-              <th scope="col">시간</th>
               <th scope="col">원화</th>
               <th scope="col">위안화</th>
               <th scope="col">비고</th>
+              <th scope="col">시간</th>
               <th scope="col">관리</th>
             </tr>
           </thead>
@@ -951,15 +951,6 @@ function CostTableView({ rows, updateRow, addRow, saveRow, deleteRow }) {
                     value={row.name}
                     onChange={(event) => updateRow(row.sort_order, 'name', event.target.value)}
                     aria-label={`${index + 1}번 항목명`}
-                  />
-                </td>
-                <td>
-                  <input
-                    value={row.type}
-                    onChange={(event) => updateRow(row.sort_order, 'type', event.target.value)}
-                    aria-label={`${index + 1}번 저장 시간`}
-                    placeholder="저장 시 자동 입력"
-                    readOnly
                   />
                 </td>
                 <td>
@@ -989,6 +980,15 @@ function CostTableView({ rows, updateRow, addRow, saveRow, deleteRow }) {
                     aria-label={`${index + 1}번 비고`}
                   />
                 </td>
+                <td>
+                  <input
+                    value={row.type}
+                    onChange={(event) => updateRow(row.sort_order, 'type', event.target.value)}
+                    aria-label={`${index + 1}번 저장 시간`}
+                    placeholder="저장 시 자동 입력"
+                    readOnly
+                  />
+                </td>                
                 <td className="cost-actions-cell">
                   {(row.isNew || row.isDirty) && (
                     <button
