@@ -497,7 +497,8 @@ h1 {
   left: 14px;
   z-index: 4;
   display: grid;
-  grid-template-columns: repeat(2, 38px);
+  grid-template-columns: 38px;
+  grid-template-rows: repeat(2, 38px);
   align-items: center;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -523,7 +524,7 @@ h1 {
 }
 
 .map-controls button + button {
-  border-left: 1px solid var(--border);
+  border-top: 1px solid var(--border);
 }
 
 .map-controls button:hover:not(:disabled) {
@@ -958,7 +959,6 @@ h1 {
   }
 
   .map-filter-controls {
-    top: 62px;
     right: 10px;
     max-width: calc(100% - 20px);
   }
