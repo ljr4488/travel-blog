@@ -63,10 +63,10 @@ const trips = [
     title: '마지막 날, 서울로 이동',
     schedule: [
       { time: '09:00 - 01:00', plan: '아침', destination: '장씨네 게살국수', note: '' },
-      { time: '10:00 - 01:00', plan: '쇼핑', destination: '미니소랜드', note: '' },
-      { time: '11:00 - 00:10', plan: '숙소', destination: '상하이 센트럴 호텔', note: '체크아웃' },
-      { time: '12:00 - 00:50', plan: '공항 이동', destination: '푸동국제공항 1터미널', note: '' },
-      { time: '13:40 - 02:05', plan: '비행', destination: '인천국제공항 2터미널', note: '16:45분 도착' },
+      { time: '10:00 - 00:30', plan: '쇼핑', destination: '미니소랜드', note: '' },
+      { time: '10:30 - 00:30', plan: '숙소', destination: '상하이 센트럴 호텔', note: '체크아웃' },
+      { time: '11:00 - 00:50', plan: '공항 이동', destination: '푸동국제공항 1터미널', note: '' },
+      { time: '11:50 - 02:05', plan: '비행', destination: '인천국제공항 2터미널', note: '16:45분 도착' },
     ],
   },
 ]
