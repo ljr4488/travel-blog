@@ -704,6 +704,71 @@ h1 {
   font-weight: 800;
 }
 
+.route-section {
+  border-top: 1px solid var(--border);
+}
+
+.route-days {
+  display: grid;
+  gap: 22px;
+}
+
+.route-day {
+  display: grid;
+  gap: 12px;
+}
+
+.route-day-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.route-day-heading h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.route-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.route-table {
+  font-size: 0.96rem;
+  width: 100%;
+  min-width: 980px;
+  border-collapse: collapse;
+}
+
+.route-table th,
+.route-table td {
+  border-bottom: 1px solid var(--border);
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.route-table th {
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.route-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.route-table td:empty::before {
+  color: var(--muted);
+  content: "-";
+}
+
 .cost-section {
   border-top: 1px solid var(--border);
 }

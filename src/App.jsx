@@ -91,6 +91,60 @@ const travelChecklist = [
   { id: 'weather', label: '출발 전 날씨 확인' },
 ]
 
+const routeDays = [
+  {
+    id: 'day1',
+    label: '1일차',
+    routes: [
+      { from: '상하이센트럴호텔', to: 'SMP몰', taxiTime: '14분', taxiDistance: '3km', walkTime: '37분', walkDistance: '2.8km' },
+      { from: 'SMP몰', to: '상하이센트럴호텔', taxiTime: '14분', taxiDistance: '3.2km', walkTime: '38분', walkDistance: '2.8km' },
+      { from: '상하이센트럴호텔', to: '황푸강 유람선 선착장', taxiTime: '12분', taxiDistance: '1.8km', walkTime: '21분', walkDistance: '1.5km' },
+      { from: '황푸강 유람선 선착장', to: '헌지우이치엔(광음광장점)', taxiTime: '15분', taxiDistance: '5.2km', walkTime: '45분', walkDistance: '3.3km' },
+      { from: '헌지우이치엔(광음광장점)', to: '상하이센트럴호텔', taxiTime: '15분', taxiDistance: '5.3km', walkTime: '72분', walkDistance: '5.4km' },
+    ],
+  },
+  {
+    id: 'day2',
+    label: '2일차',
+    routes: [
+      { from: '상하이센트럴호텔', to: '산동잡곡전병', taxiTime: '', taxiDistance: '', walkTime: '7분', walkDistance: '480m' },
+      { from: '산동잡곡전병', to: 'CHAGEE', taxiTime: '', taxiDistance: '', walkTime: '6분', walkDistance: '424m' },
+      { from: 'CHAGEE', to: '상하이센트럴호텔', taxiTime: '', taxiDistance: '', walkTime: '3분', walkDistance: '163m' },
+      { from: '상하이센트럴호텔', to: '홍쿠이지아', taxiTime: '11분', taxiDistance: '1.4km', walkTime: '14분', walkDistance: '1km' },
+      { from: '홍쿠이지아', to: '상하이 스타벅스 리저브', taxiTime: '16분', taxiDistance: '3km', walkTime: '29분', walkDistance: '2.2km' },
+      { from: '상하이 스타벅스 리저브', to: '따룬파 마트', taxiTime: '19분', taxiDistance: '5km', walkTime: '57분', walkDistance: '4.3km' },
+      { from: '따룬파 마트', to: '상하이센트럴호텔', taxiTime: '19분', taxiDistance: '4.6km', walkTime: '60분', walkDistance: '4.5km' },
+      { from: '상하이센트럴호텔', to: '미니소랜드', taxiTime: '', taxiDistance: '', walkTime: '5분', walkDistance: '348m' },
+      { from: '미니소랜드', to: '예원', taxiTime: '15분', taxiDistance: '1.8km', walkTime: '25분', walkDistance: '1.8km' },
+      { from: '예원', to: '상하이 그랜드마더', taxiTime: '15분', taxiDistance: '2.6km', walkTime: '23분', walkDistance: '1.7km' },
+      { from: '상하이 그랜드마더', to: '상하이센트럴호텔', taxiTime: '', taxiDistance: '', walkTime: '5분', walkDistance: '320m' },
+    ],
+  },
+  {
+    id: 'day3',
+    label: '3일차',
+    routes: [
+      { from: '상하이센트럴호텔', to: '우캉멘션', taxiTime: '29분', taxiDistance: '6.8km', walkTime: '79분', walkDistance: '6km' },
+      { from: '우캉멘션', to: '라오지스', taxiTime: '', taxiDistance: '', walkTime: '3분', walkDistance: '188m' },
+      { from: '라오지스', to: '신천지 임시정부', taxiTime: '25분', taxiDistance: '4.5km', walkTime: '55분', walkDistance: '4.1km' },
+      { from: '신천지 임시정부', to: '티엔즈팡', taxiTime: '15분', taxiDistance: '2.4km', walkTime: '24분', walkDistance: '1.7km' },
+      { from: '티엔즈팡', to: '상하이센트럴호텔', taxiTime: '19분', taxiDistance: '4.3km', walkTime: '53분', walkDistance: '3.9km' },
+      { from: '상하이센트럴호텔', to: '신세계 백화점', taxiTime: '8분', taxiDistance: '1km', walkTime: '12분', walkDistance: '864m' },
+      { from: '신세계 백화점', to: '상하이센트럴호텔', taxiTime: '8분', taxiDistance: '1km', walkTime: '12분', walkDistance: '864m' },
+    ],
+  },
+  {
+    id: 'day4',
+    label: '4일차',
+    routes: [
+      { from: '상하이센트럴호텔', to: '장씨네 게살국수', taxiTime: '9분', taxiDistance: '1.4km', walkTime: '13분', walkDistance: '949m' },
+      { from: '장씨네 게살국수', to: '미니소랜드', taxiTime: '8분', taxiDistance: '1.1km', walkTime: '13분', walkDistance: '973m' },
+      { from: '미니소랜드', to: '상하이센트럴호텔', taxiTime: '', taxiDistance: '', walkTime: '5분', walkDistance: '349m' },
+      { from: '상하이센트럴호텔', to: '푸동국제공항', taxiTime: '52분', taxiDistance: '43.5km', walkTime: '', walkDistance: '' },
+    ],
+  },
+]
+
 const costs = [
   { id: 1, name: '항공권', type: '교통', amount: '360000', amount_cny: '', note: '왕복 항공권 2인' },
   { id: 2, name: '숙소', type: '숙박', amount: '320000', amount_cny: '', note: '상하이 센트럴 호텔 3박' },
@@ -1086,6 +1140,47 @@ function TravelChecklist() {
   )
 }
 
+function RouteTable() {
+  return (
+    <div className="route-days">
+      {routeDays.map((day) => (
+        <article className="route-day" key={day.id}>
+          <div className="route-day-heading">
+            <h3>{day.label}</h3>
+          </div>
+
+          <div className="route-table-wrap">
+            <table className="route-table">
+              <thead>
+                <tr>
+                  <th scope="col">출발지</th>
+                  <th scope="col">도착지</th>
+                  <th scope="col">택시 예상 시간</th>
+                  <th scope="col">택시 거리</th>
+                  <th scope="col">도보 예상 시간</th>
+                  <th scope="col">도보 거리</th>
+                </tr>
+              </thead>
+              <tbody>
+                {day.routes.map((row, index) => (
+                  <tr key={`${day.id}-${row.from}-${row.to}-${index}`}>
+                    <td>{row.from}</td>
+                    <td>{row.to}</td>
+                    <td>{row.taxiTime}</td>
+                    <td>{row.taxiDistance}</td>
+                    <td>{row.walkTime}</td>
+                    <td>{row.walkDistance}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </article>
+      ))}
+    </div>
+  )
+}
+
 function App() {
   return (
     <main className="app-shell">
@@ -1105,6 +1200,7 @@ function App() {
               <a className="primary-action" href="#schedule">일정 보기</a>
               <a className="secondary-action" href="#places">방문 장소</a>
               <a className="secondary-action" href="#map">지도</a>
+              <a className="secondary-action" href="#routes">이동 동선</a>
               <a className="secondary-action" href="#cost">비용</a>
               <a className="secondary-action" href="#travel-info">여행 정보</a>
             </div>
@@ -1244,6 +1340,15 @@ function App() {
         </div>
 
         <ShanghaiMap places={placesWithAmapLinks} />
+      </section>
+
+      <section className="content-section route-section" id="routes">
+        <div className="section-heading">
+          <p className="eyebrow">이동 동선</p>
+          <h2>일자별 이동 계획</h2>
+        </div>
+
+        <RouteTable />
       </section>
 
       <section className="content-section cost-section" id="cost">
