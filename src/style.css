@@ -356,6 +356,14 @@ h1 {
   padding: 18px;
 }
 
+.place-side {
+  display: grid;
+  grid-column: 1;
+  grid-row: 1;
+  justify-items: center;
+  gap: 8px;
+}
+
 .place-number {
   display: grid;
   place-items: center;
@@ -377,6 +385,8 @@ h1 {
 }
 
 .place-info {
+  grid-column: 1 / -1;
+  grid-row: 2;
   min-width: 0;
 }
 
@@ -387,9 +397,21 @@ h1 {
 }
 
 .place-name-zh {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: var(--blue);
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.place-name-address {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
   gap: 8px;
   margin-bottom: 12px;
   color: var(--blue);
@@ -399,7 +421,8 @@ h1 {
 }
 
 .copy-name-button {
-  min-width: 44px;
+  justify-self: end;
+  width: 42px;
   min-height: 28px;
   border: 1px solid rgba(200, 162, 110, 0.24);
   border-radius: 8px;
@@ -425,22 +448,27 @@ h1 {
 }
 
 .place-map-link {
+  position: relative;
+  z-index: 1;
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
   display: inline-grid;
   place-items: center;
   min-width: 48px;
   min-height: 38px;
-  border: 1px solid rgba(200, 162, 110, 0.3);
+  border: 1px solid rgba(63, 143, 95, 0.3);
   border-radius: 8px;
-  background: rgba(200, 162, 110, 0.1);
-  color: var(--accent2);
+  background: rgba(63, 143, 95, 0.1);
+  color: #2f744b;
   font-size: 0.84rem;
   font-weight: 900;
   text-decoration: none;
 }
 
 .place-map-link:hover {
-  background: var(--accent);
-  color: var(--text);
+  background: #3f8f5f;
+  color: #fff;
 }
 
 .place-card p {
@@ -940,13 +968,14 @@ h1 {
   }
 
   .place-card {
-    grid-template-columns: 42px minmax(0, 1fr);
+    grid-template-columns: 42px minmax(0, 1fr) auto;
     min-height: auto;
   }
 
   .place-map-link {
-    grid-column: 2;
-    justify-self: start;
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
   }
 
   .city-map {

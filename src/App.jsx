@@ -1207,7 +1207,9 @@ function App() {
         <div className="places-grid">
           {placesWithAmapLinks.map((place, index) => (
             <article className="place-card" key={`${place.nameKo}-${place.nameZh}`}>
-              <span className="place-number">{String(index + 1).padStart(2, '0')}</span>
+              <div className="place-side">
+                <span className="place-number">{String(index + 1).padStart(2, '0')}</span>
+              </div>
               <div className="place-info">
                 <span className="place-category">{place.category}</span>
                 <h3>{place.nameKo}</h3>
@@ -1216,7 +1218,10 @@ function App() {
                   <span>{place.nameZh}</span>
                   <CopyChineseNameButton name={place.nameZh} />
                 </div>
-                <address>{place.address}</address>
+                <div className="place-name-address">
+                  <address>{place.address}</address>
+                  <CopyChineseNameButton name={place.address} />
+                </div>
               </div>
               <a
                 className="place-map-link"
@@ -1225,7 +1230,7 @@ function App() {
                 rel="noreferrer"
                 aria-label={`${place.nameKo} 지도 열기`}
               >
-                지도
+                Amap
               </a>
             </article>
           ))}
