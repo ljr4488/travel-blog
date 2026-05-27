@@ -96,51 +96,51 @@ const routeDays = [
     id: 'day1',
     label: '1일차',
     routes: [
-      { from: '상하이센트럴호텔', to: 'SMP몰', taxiTime: '14분', taxiDistance: '3km', walkTime: '37분', walkDistance: '2.8km' },
-      { from: 'SMP몰', to: '상하이센트럴호텔', taxiTime: '14분', taxiDistance: '3.2km', walkTime: '38분', walkDistance: '2.8km' },
-      { from: '상하이센트럴호텔', to: '황푸강 유람선 선착장', taxiTime: '12분', taxiDistance: '1.8km', walkTime: '21분', walkDistance: '1.5km' },
-      { from: '황푸강 유람선 선착장', to: '헌지우이치엔(광음광장점)', taxiTime: '15분', taxiDistance: '5.2km', walkTime: '45분', walkDistance: '3.3km' },
-      { from: '헌지우이치엔(광음광장점)', to: '상하이센트럴호텔', taxiTime: '15분', taxiDistance: '5.3km', walkTime: '72분', walkDistance: '5.4km' },
+      { from: '상하이센트럴호텔', to: 'SMP몰', taxiTime: '14분', taxiDistance: '3km', taxiFare: '15Y' ,walkTime: '37분', walkDistance: '2.8km' },
+      { from: 'SMP몰', to: '상하이센트럴호텔', taxiTime: '14분', taxiDistance: '3.2km', taxiFare: '15Y', walkTime: '38분', walkDistance: '2.8km' },
+      { from: '상하이센트럴호텔', to: '황푸강 유람선 선착장', taxiTime: '12분', taxiDistance: '1.8km', taxiFare: '12Y', walkTime: '21분', walkDistance: '1.5km' },
+      { from: '황푸강 유람선 선착장', to: '헌지우이치엔(광음광장점)', taxiTime: '15분', taxiDistance: '5.2km', taxiFare: '19Y', walkTime: '45분', walkDistance: '3.3km' },
+      { from: '헌지우이치엔(광음광장점)', to: '상하이센트럴호텔', taxiTime: '15분', taxiDistance: '5.3km', taxiFare: '22Y', walkTime: '72분', walkDistance: '5.4km' },
     ],
   },
   {
     id: 'day2',
     label: '2일차',
     routes: [
-      { from: '상하이센트럴호텔', to: '산동잡곡전병', taxiTime: '', taxiDistance: '', walkTime: '7분', walkDistance: '480m' },
-      { from: '산동잡곡전병', to: 'CHAGEE', taxiTime: '', taxiDistance: '', walkTime: '6분', walkDistance: '424m' },
-      { from: 'CHAGEE', to: '상하이센트럴호텔', taxiTime: '', taxiDistance: '', walkTime: '3분', walkDistance: '163m' },
-      { from: '상하이센트럴호텔', to: '홍쿠이지아', taxiTime: '11분', taxiDistance: '1.4km', walkTime: '14분', walkDistance: '1km' },
-      { from: '홍쿠이지아', to: '상하이 스타벅스 리저브', taxiTime: '16분', taxiDistance: '3km', walkTime: '29분', walkDistance: '2.2km' },
-      { from: '상하이 스타벅스 리저브', to: '따룬파 마트', taxiTime: '19분', taxiDistance: '5km', walkTime: '57분', walkDistance: '4.3km' },
-      { from: '따룬파 마트', to: '상하이센트럴호텔', taxiTime: '19분', taxiDistance: '4.6km', walkTime: '60분', walkDistance: '4.5km' },
-      { from: '상하이센트럴호텔', to: '미니소랜드', taxiTime: '', taxiDistance: '', walkTime: '5분', walkDistance: '348m' },
-      { from: '미니소랜드', to: '예원', taxiTime: '15분', taxiDistance: '1.8km', walkTime: '25분', walkDistance: '1.8km' },
-      { from: '예원', to: '상하이 그랜드마더', taxiTime: '15분', taxiDistance: '2.6km', walkTime: '23분', walkDistance: '1.7km' },
-      { from: '상하이 그랜드마더', to: '상하이센트럴호텔', taxiTime: '', taxiDistance: '', walkTime: '5분', walkDistance: '320m' },
+      { from: '상하이센트럴호텔', to: '산동잡곡전병', taxiTime: '', taxiDistance: '', taxiFare: '', walkTime: '7분', walkDistance: '480m' },
+      { from: '산동잡곡전병', to: 'CHAGEE', taxiTime: '', taxiDistance: '', taxiFare: '', walkTime: '6분', walkDistance: '424m' },
+      { from: 'CHAGEE', to: '상하이센트럴호텔', taxiTime: '', taxiDistance: '', taxiFare: '', walkTime: '3분', walkDistance: '163m' },
+      { from: '상하이센트럴호텔', to: '홍쿠이지아', taxiTime: '11분', taxiDistance: '1.4km', taxiFare: '15Y', walkTime: '14분', walkDistance: '1km' },
+      { from: '홍쿠이지아', to: '상하이 스타벅스 리저브', taxiTime: '16분', taxiDistance: '3km', taxiFare: '18Y', walkTime: '29분', walkDistance: '2.2km' },
+      { from: '상하이 스타벅스 리저브', to: '따룬파 마트', taxiTime: '19분', taxiDistance: '5km', taxiFare: '19Y', walkTime: '57분', walkDistance: '4.3km' },
+      { from: '따룬파 마트', to: '상하이센트럴호텔', taxiTime: '19분', taxiDistance: '4.6km', taxiFare: '22Y', walkTime: '60분', walkDistance: '4.5km' },
+      { from: '상하이센트럴호텔', to: '미니소랜드', taxiTime: '', taxiDistance: '', taxiFare: '', walkTime: '5분', walkDistance: '348m' },
+      { from: '미니소랜드', to: '예원', taxiTime: '15분', taxiDistance: '1.8km', taxiFare: '13Y', walkTime: '25분', walkDistance: '1.8km' },
+      { from: '예원', to: '상하이 그랜드마더', taxiTime: '15분', taxiDistance: '2.6km', taxiFare: '13Y', walkTime: '23분', walkDistance: '1.7km' },
+      { from: '상하이 그랜드마더', to: '상하이센트럴호텔', taxiTime: '', taxiDistance: '', taxiFare: '', walkTime: '5분', walkDistance: '320m' },
     ],
   },
   {
     id: 'day3',
     label: '3일차',
     routes: [
-      { from: '상하이센트럴호텔', to: '우캉멘션', taxiTime: '29분', taxiDistance: '6.8km', walkTime: '79분', walkDistance: '6km' },
-      { from: '우캉멘션', to: '라오지스', taxiTime: '', taxiDistance: '', walkTime: '3분', walkDistance: '188m' },
-      { from: '라오지스', to: '신천지 임시정부', taxiTime: '25분', taxiDistance: '4.5km', walkTime: '55분', walkDistance: '4.1km' },
-      { from: '신천지 임시정부', to: '티엔즈팡', taxiTime: '15분', taxiDistance: '2.4km', walkTime: '24분', walkDistance: '1.7km' },
-      { from: '티엔즈팡', to: '상하이센트럴호텔', taxiTime: '19분', taxiDistance: '4.3km', walkTime: '53분', walkDistance: '3.9km' },
-      { from: '상하이센트럴호텔', to: '신세계 백화점', taxiTime: '8분', taxiDistance: '1km', walkTime: '12분', walkDistance: '864m' },
-      { from: '신세계 백화점', to: '상하이센트럴호텔', taxiTime: '8분', taxiDistance: '1km', walkTime: '12분', walkDistance: '864m' },
+      { from: '상하이센트럴호텔', to: '우캉멘션', taxiTime: '29분', taxiDistance: '6.8km', taxiFare: '30Y', walkTime: '79분', walkDistance: '6km' },
+      { from: '우캉멘션', to: '라오지스', taxiTime: '', taxiDistance: '', taxiFare: '', walkTime: '3분', walkDistance: '188m' },
+      { from: '라오지스', to: '신천지 임시정부', taxiTime: '25분', taxiDistance: '4.5km', taxiFare: '25Y', walkTime: '55분', walkDistance: '4.1km' },
+      { from: '신천지 임시정부', to: '티엔즈팡', taxiTime: '15분', taxiDistance: '2.4km', taxiFare: '17Y', walkTime: '24분', walkDistance: '1.7km' },
+      { from: '티엔즈팡', to: '상하이센트럴호텔', taxiTime: '19분', taxiDistance: '4.3km', taxiFare: '22Y', walkTime: '53분', walkDistance: '3.9km' },
+      { from: '상하이센트럴호텔', to: '신세계 백화점', taxiTime: '8분', taxiDistance: '1km', taxiFare: '', walkTime: '12분', walkDistance: '864m' },
+      { from: '신세계 백화점', to: '상하이센트럴호텔', taxiTime: '8분', taxiDistance: '1km', taxiFare: '', walkTime: '12분', walkDistance: '864m' },
     ],
   },
   {
     id: 'day4',
     label: '4일차',
     routes: [
-      { from: '상하이센트럴호텔', to: '장씨네 게살국수', taxiTime: '9분', taxiDistance: '1.4km', walkTime: '13분', walkDistance: '949m' },
-      { from: '장씨네 게살국수', to: '미니소랜드', taxiTime: '8분', taxiDistance: '1.1km', walkTime: '13분', walkDistance: '973m' },
-      { from: '미니소랜드', to: '상하이센트럴호텔', taxiTime: '', taxiDistance: '', walkTime: '5분', walkDistance: '349m' },
-      { from: '상하이센트럴호텔', to: '푸동국제공항', taxiTime: '52분', taxiDistance: '43.5km', walkTime: '', walkDistance: '' },
+      { from: '상하이센트럴호텔', to: '장씨네 게살국수', taxiTime: '9분', taxiDistance: '1.4km', taxiFare: '', walkTime: '13분', walkDistance: '949m' },
+      { from: '장씨네 게살국수', to: '미니소랜드', taxiTime: '8분', taxiDistance: '1.1km', taxiFare: '', walkTime: '13분', walkDistance: '973m' },
+      { from: '미니소랜드', to: '상하이센트럴호텔', taxiTime: '', taxiDistance: '', taxiFare: '', walkTime: '5분', walkDistance: '349m' },
+      { from: '상하이센트럴호텔', to: '푸동국제공항', taxiTime: '52분', taxiDistance: '43.5km', taxiFare: '180Y', walkTime: '', walkDistance: '' },
     ],
   },
 ]
@@ -1157,6 +1157,7 @@ function RouteTable() {
                   <th scope="col">도착지</th>
                   <th scope="col">택시 예상 시간</th>
                   <th scope="col">택시 거리</th>
+                  <th scope="col">택시 요금</th>
                   <th scope="col">도보 예상 시간</th>
                   <th scope="col">도보 거리</th>
                 </tr>
@@ -1168,6 +1169,7 @@ function RouteTable() {
                     <td>{row.to}</td>
                     <td>{row.taxiTime}</td>
                     <td>{row.taxiDistance}</td>
+                    <td>{row.taxiFare}</td>
                     <td>{row.walkTime}</td>
                     <td>{row.walkDistance}</td>
                   </tr>
