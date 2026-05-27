@@ -10,6 +10,7 @@ const trips = [
     date: '2026.06.12',
     title: '상해 도착',
     schedule: [
+      { time: '06:50 - 00:02', plan: '지하철', destination: '올림픽공원역', note: '' },
       { time: '07:01 - 01:40', plan: '공항버스', destination: '인천국제공항 2터미널', note: '올림픽선수촌 탑승' },
       { time: '11:10 - 02:15', plan: '비행', destination: '푸동국제공항 1터미널', note: '' },
       { time: '14:00 - 00:50', plan: '숙소 이동', destination: '상하이 센트럴 호텔', note: '택시' },
@@ -45,7 +46,7 @@ const trips = [
     date: '2026.06.14',
     title: '관광과 쇼핑',
     schedule: [
-      { time: '09:00 - 01:00', plan: '아침', note: '또우장 & 요우티아오' },
+      { time: '09:00 - 01:00', plan: '아침', destination: '', note: '또우장 & 요우티아오' },
       { time: '10:00 - 01:00', plan: '숙소', note: '' },
       { time: '11:00 - 01:00', plan: '관광', destination: '우캉멘션', note: '' },
       { time: '12:00 - 01:00', plan: '점심', destination: '라오지스', note: '' },
@@ -175,6 +176,14 @@ const places = [
     amapUrl: 'https://surl.amap.com/cRymWRI1p4B6',
     coordinates: { lat: 31.236637, lng: 121.476061 },
   },
+  {
+    nameKo: '점도덕',
+    nameZh: '点都德(白玉兰店)',
+    category: '식당',
+    address: '上海市虹口区上海城区东大名路555号白玉兰广场2楼',
+    amapUrl: 'https://surl.amap.com/4mGMVUOr66Z',
+    coordinates: { lat: 31.250377, lng: 121.492825 },
+  },  
   {
     nameKo: 'SMP몰',
     nameZh: 'SMP上海白玉兰广场',
@@ -308,6 +317,14 @@ const places = [
     coordinates: { lat: 31.210331, lng: 121.464098 },
   },
   {
+    nameKo: '좌정우원',
+    nameZh: '左庭右院鲜牛肉火锅(新世界新丸中心店)',
+    category: '식당',
+    address: '上海市黄浦区南京东路228号新世界大丸百货B2层',
+    amapUrl: 'https://surl.amap.com/4ycF1IO1g4NY',
+    coordinates: { lat: 31.239963, lng: 121.481034 },
+  },  
+  {
     nameKo: '신세계백화점',
     nameZh: '上海新世界大丸百货',
     category: '쇼핑',
@@ -354,14 +371,15 @@ const MAP_CENTER = { lat: 31.22, lng: 121.6 }
 const MIN_MAP_ZOOM = 9
 const MAX_MAP_ZOOM = 20
 const MAP_CATEGORY_OPTIONS = [
-  { id: 'food', label: '식당', categories: ['식당', '카페'] },
+  { id: 'food', label: '식당', categories: ['식당'] },
+  { id: 'cafe', label: '카페', categories: ['카페'] },
   { id: 'shopping', label: '쇼핑', categories: ['쇼핑', '쇼핑거리', '마트', '복합몰'] },
   { id: 'spot', label: '명소', categories: ['명소'] },
   { id: 'hotel', label: '숙소', categories: ['숙소'] },
 ]
 const MAP_CATEGORY_COLOR_CLASS = {
   식당: 'food',
-  카페: 'food',
+  카페: 'cafe',
   쇼핑: 'shopping',
   쇼핑거리: 'shopping',
   마트: 'shopping',

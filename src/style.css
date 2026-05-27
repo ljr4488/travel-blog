@@ -603,6 +603,10 @@ h1 {
   --marker-color: #3f8f5f;
 }
 
+.map-filter-button.cafe {
+  --marker-color: #C000FF;
+}
+
 .map-filter-button.shopping {
   --marker-color: var(--pink);
 }
@@ -647,6 +651,10 @@ h1 {
 
 .map-marker.food {
   --marker-color: #3f8f5f;
+}
+
+.map-marker.cafe {
+  --marker-color: #C000FF;
 }
 
 .map-marker.shopping {
