@@ -132,7 +132,8 @@ const routeDays = [
       { from: '신천지 임시정부', to: '티엔즈팡', taxiTime: '15분', taxiDistance: '2.4km', taxiFare: '17Y', walkTime: '24분', walkDistance: '1.7km' },
       { from: '티엔즈팡', to: '상하이센트럴호텔', taxiTime: '19분', taxiDistance: '4.3km', taxiFare: '22Y', walkTime: '53분', walkDistance: '3.9km' },
       { from: '상하이센트럴호텔', to: '신세계 백화점', taxiTime: '8분', taxiDistance: '1km', taxiFare: '', walkTime: '12분', walkDistance: '864m' },
-      { from: '신세계 백화점', to: '상하이센트럴호텔', taxiTime: '8분', taxiDistance: '1km', taxiFare: '', walkTime: '12분', walkDistance: '864m' },
+      { from: '신세계 백화점', to: '도원향(난징동루점)', taxiTime: '', taxiDistance: '', taxiFare: '', walkTime: '8분', walkDistance: '463m' },
+      { from: '도원향(난징동루점)', to: '상하이센트럴호텔', taxiTime: '', taxiDistance: '', taxiFare: '', walkTime: '5분', walkDistance: '293m' },
     ],
   },
   {
@@ -328,7 +329,7 @@ const places = [
   {
     nameKo: '도원향',
     nameZh: '桃源乡(南京东路店)',
-    category: '명소',
+    category: '마사지',
     address: '上海市黄浦区南京东路505号',
     amapUrl: 'https://surl.amap.com/3fh4LLNv2fjR',
     coordinates: { lat: 31.237720, lng: 121.476490 },
@@ -400,7 +401,7 @@ const MAP_CATEGORY_OPTIONS = [
   { id: 'cafe', label: '카페', categories: ['카페'] },
   { id: 'shopping', label: '쇼핑', categories: ['쇼핑', '쇼핑거리', '마트', '복합몰'] },
   { id: 'spot', label: '명소', categories: ['명소'] },
-  { id: 'hotel', label: '숙소', categories: ['숙소'] },
+  { id: 'hotel', label: '숙소', categories: ['숙소', '마사지'] },
 ]
 const MAP_CATEGORY_COLOR_CLASS = {
   식당: 'food',
@@ -411,6 +412,7 @@ const MAP_CATEGORY_COLOR_CLASS = {
   복합몰: 'shopping',
   명소: 'spot',
   숙소: 'hotel',
+  마사지: 'hotel',
 }
 
 function projectToTilePixels({ lat, lng }, zoom) {
@@ -1231,7 +1233,7 @@ function App() {
     <main className="app-shell">
       <section className="hero-section" aria-label="Travel overview">
         <nav className="topbar" aria-label="Primary navigation">
-          <strong>J♥R Travel Log</strong>
+          <strong>S♥R Travel Log</strong>
         </nav>
 
         <div className="hero-grid">
