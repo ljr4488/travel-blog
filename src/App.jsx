@@ -52,9 +52,10 @@ const trips = [
       { time: '12:00 - 01:00', plan: '점심', destination: '라오지스', note: '' },
       { time: '13:00 - 01:00', plan: '관광', destination: '신천지 임시정부', note: '' },
       { time: '14:00 - 02:00', plan: '쇼핑', destination: '티엔즈팡', note: '홀리랜드, 핸드크림' },
-      { time: '16:00 - 01:30', plan: '숙소', note: '' },
-      { time: '17:30 - 01:00', plan: '저녁', destination: '신세계백화점', note: '좌정우원(훠궈)' },
-      { time: '18:30 - 02:00', plan: '쇼핑', destination: '신세계백화점', note: '' },
+      { time: '16:00 - 01:00', plan: '숙소', note: '' },
+      { time: '17:00 - 01:00', plan: '저녁', destination: '신세계백화점', note: '좌정우원(훠궈)' },
+      { time: '18:00 - 01:00', plan: '쇼핑', destination: '신세계백화점', note: '' },
+      { time: '19:00 - 01:00', plan: '휴식', destination: '도원향(난징동루점)', note: '발 마사지' },      
     ],
   },
   {
@@ -324,6 +325,14 @@ const places = [
     amapUrl: 'https://surl.amap.com/eD5jB7s1d8bU',
     coordinates: { lat: 31.210331, lng: 121.464098 },
   },
+  {
+    nameKo: '도원향',
+    nameZh: '桃源乡(南京东路店)',
+    category: '명소',
+    address: '上海市黄浦区南京东路505号',
+    amapUrl: 'https://surl.amap.com/3fh4LLNv2fjR',
+    coordinates: { lat: 31.237720, lng: 121.476490 },
+  },  
   {
     nameKo: '좌정우원',
     nameZh: '左庭右院鲜牛肉火锅(新世界新丸中心店)',
