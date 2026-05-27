@@ -521,7 +521,7 @@ h1 {
 
 .map-controls {
   position: absolute;
-  top: 14px;
+  bottom: 14px;
   left: 14px;
   z-index: 4;
   display: grid;

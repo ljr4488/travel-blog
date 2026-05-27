@@ -183,6 +183,14 @@ const places = [
     address: '上海市虹口区上海城区东大名路555号白玉兰广场2楼',
     amapUrl: 'https://surl.amap.com/4mGMVUOr66Z',
     coordinates: { lat: 31.250377, lng: 121.492825 },
+  },
+  {
+    nameKo: 'CHAGEE(SMP점)',
+    nameZh: '霸王茶姬(上海白玉兰广场店)',
+    category: '카페',
+    address: '上海市虹口区北外滩街道东大名路501号上海白玉兰广场1楼',
+    amapUrl: 'https://surl.amap.com/4UNsF8O1ce8H',
+    coordinates: { lat: 31.250901, lng: 121.492299 },
   },  
   {
     nameKo: 'SMP몰',
@@ -237,7 +245,7 @@ const places = [
     coordinates: { lat: 31.238266, lng: 121.472327 },
   },
   {
-    nameKo: 'CHAGEE',
+    nameKo: 'CHAGEE(중푸청점)',
     nameZh: '霸王茶姬(中福城店)',
     category: '카페',
     address: '上海市黄浦区浙江中路210号底层',
@@ -332,6 +340,14 @@ const places = [
     amapUrl: 'https://surl.amap.com/azeoA4W1hfRD',
     coordinates: { lat: 31.240348, lng: 121.481109 },
   },
+  {
+    nameKo: '헤이티',
+    nameZh: '喜茶(上海新世界新丸中心店)',
+    category: '카페',
+    address: '上海市黄浦区南京东路228号上海新世界大丸百货商场1楼',
+    amapUrl: 'https://surl.amap.com/1Lo8UPoo1wU',
+    coordinates: { lat: 31.240481, lng: 121.480358 },
+  },   
   {
     nameKo: '장씨네 게살국수',
     nameZh: '庄氏隆兴·非遗蟹点(外滩店)',
