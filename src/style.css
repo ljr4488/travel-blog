@@ -132,13 +132,19 @@ h1 {
 
 .primary-action,
 .secondary-action {
+  border: 1px solid transparent;
   border-radius: 999px;
   padding: 13px 18px;
   font-weight: 800;
   text-decoration: none;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
 }
 
 .primary-action {
+  border-color: var(--accent);
   background: var(--accent);
   color: var(--text);
 }
@@ -146,6 +152,28 @@ h1 {
 .secondary-action {
   border: 1px solid rgba(255, 255, 255, 0.65);
   color: #fff;
+}
+
+.primary-action:focus-visible,
+.secondary-action:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.72);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-actions:hover .primary-action,
+  .hero-actions:hover .secondary-action {
+    border-color: rgba(255, 255, 255, 0.65);
+    background: transparent;
+    color: #fff;
+  }
+
+  .hero-actions .primary-action:hover,
+  .hero-actions .secondary-action:hover {
+    border-color: var(--accent);
+    background: var(--accent);
+    color: var(--text);
+  }
 }
 
 .trip-panel,
