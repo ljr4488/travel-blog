@@ -74,7 +74,7 @@ const trips = [
 ]
 
 const notes = [
-  { label: 'Budget', value: '₩1,000,000' },
+  { label: 'Budget', value: '₩2,000,000' },
   { label: 'Travelers', value: '2 people' },
 ]
 
