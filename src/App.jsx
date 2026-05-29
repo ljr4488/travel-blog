@@ -10,12 +10,12 @@ const trips = [
     date: '2026.06.12',
     title: '상해 도착',
     schedule: [
-      { time: '06:50 - 00:02', plan: '지하철', destination: '올림픽공원역', note: '' },
+      { time: '06:50 - 00:02', plan: '지하철', destination: '올림픽공원역', note: '9호선' },
       { time: '07:01 - 01:40', plan: '공항버스', destination: '인천국제공항 2터미널', note: '올림픽선수촌 탑승' },
-      { time: '11:10 - 02:15', plan: '비행', destination: '푸동국제공항 1터미널', note: '' },
-      { time: '14:00 - 00:50', plan: '숙소 이동', destination: '상하이 센트럴 호텔', note: '택시' },
-      { time: '14:50 - 00:10', plan: '체크인', note: '' },
-      { time: '15:00 - 01:00', plan: '점심', destination: 'SMP몰', note: '点都德(白玉兰店)' },
+      { time: '11:10 - 02:15', plan: '비행', destination: '푸동국제공항 1터미널', note: '대한항공' },
+      { time: '14:00 - 00:50', plan: '숙소 이동', destination: '상하이 센트럴 호텔', note: '디디택시' },
+      { time: '14:50 - 00:10', plan: '체크인', destination: '', note: '' },
+      { time: '15:00 - 01:00', plan: '점심', destination: '점도덕(SMP몰)', note: '点都德(白玉兰店)' },
       { time: '16:00 - 01:00', plan: '쇼핑', destination: 'SMP몰', note: '핸드크림' },
       { time: '17:00 - 01:30', plan: '숙소', note: '휴식' },
       { time: '18:30 - 02:30', plan: '관광', note: '와이탄 & 황푸강' },
@@ -28,6 +28,7 @@ const trips = [
     date: '2026.06.13',
     title: '쇼핑과 관광',
     schedule: [
+      { time: '07:30 - 00:40', plan: '조깅', destination: '황푸강변', note: '' },
       { time: '09:00 - 01:00', plan: '아침', destination: '산동잡곡전병', note: '' },
       { time: '10:00 - 00:30', plan: '카페', destination: 'CHAGEE', note: '' },
       { time: '10:30 - 01:30', plan: '숙소', note: '휴식 or 운동' },
@@ -46,6 +47,7 @@ const trips = [
     date: '2026.06.14',
     title: '관광과 쇼핑',
     schedule: [
+      { time: '07:30 - 00:40', plan: '조깅', destination: '황푸강변', note: '' },
       { time: '09:00 - 01:00', plan: '아침', destination: '', note: '또우장 & 요우티아오' },
       { time: '10:00 - 01:00', plan: '숙소', note: '' },
       { time: '11:00 - 01:00', plan: '관광', destination: '우캉멘션', note: '' },
@@ -64,6 +66,7 @@ const trips = [
     date: '2026.06.15',
     title: '마지막 날, 서울로 이동',
     schedule: [
+      { time: '07:30 - 00:40', plan: '조깅', destination: '황푸강변', note: '' },
       { time: '09:00 - 01:00', plan: '아침', destination: '장씨네 게살국수', note: '' },
       { time: '10:00 - 00:30', plan: '쇼핑', destination: '미니소랜드', note: '' },
       { time: '10:30 - 00:30', plan: '숙소', destination: '상하이 센트럴 호텔', note: '체크아웃' },
