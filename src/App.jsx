@@ -233,6 +233,15 @@ const places = [
     coordinates: { lat: 31.235454, lng: 121.487790 },
   },
   {
+    nameKo: '인디고 호텔(유람선 티켓 수령, 회전문 앞 18:20 까지)',
+    nameZh: '上海外滩英迪格酒店',
+    nameEn: 'Shanghai on the Bund Indigo Hotel',
+    category: '명소',
+    address: '上海市黄浦区中山东二路585号',
+    amapUrl: 'https://surl.amap.com/5EKoQ9KydBq',
+    coordinates: { lat: 31.228099, lng: 121.495665 },
+  },  
+  {
     nameKo: '황푸강 유람선 선착장',
     nameZh: '黄浦江游览码头',
     nameEn: '',
